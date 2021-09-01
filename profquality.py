@@ -1,0 +1,30 @@
+print("Welcome to the professor quality calculator by MillenniumWare!")
+print("Follow the prompts below to calculate how good your professor is!!!")
+print("************************")
+print("")
+name = input("Enter your professor's name! >")
+print("")
+print("On a scale of 1-5 (1 being horrible, 2 tolerable, 3 adequate, 4 pretty decent, 5 God-tier):")
+print("")
+diff = input("How difficult is your professor? >")
+diff = int(diff)
+if not diff in range(1,6):
+    print("Invalid input")
+    exit()
+nice = input("How nice of a person is your professor? >")
+nice = int(nice)
+if not nice in range(1,6):
+    print("Invalid input")
+    exit()
+clarity = input("How clear are your professor's explanations and other teaching aspects? >")
+clarity = int(clarity)
+if not clarity in range(1,6):
+    print("Invalid input")
+    exit()
+excite = input("How exciting does the professor make the class content? >")
+excite = int(excite)
+if not excite in range(1,6):
+    print("Invalid input")
+    exit()
+score = (excite + clarity +nice +diff)/4
+print("Professor", name,"scored", score, "stars!")
